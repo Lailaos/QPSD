@@ -1,0 +1,392 @@
+/* General page styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9fbfe;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Header and branding */
+.home-icon, .user-container {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  color: #071D49;
+}
+
+.HOME-text, .user-text {
+  margin-left: 5px;
+}
+
+.abbvie-logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #071D49;
+  text-align: center;
+  margin: 15px 0;
+}
+
+.header2 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.header2 h2 {
+  color: #071D49;
+  font-size: 24px;
+}
+
+/* Navigation row buttons */
+.row-btn {
+  background-color: #071D49;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 16px;
+  margin: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.row-btn:hover {
+  background-color: #b0bcd3;
+}
+
+.dialog-select {
+  padding: 9px 14px;
+  border-radius: 4px;
+  background-color: #071D49;
+  color: white;
+}
+
+/* Table controls */
+.table-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0 10px;
+}
+
+.search-container {
+  flex: 1;
+  max-width: 200px;
+}
+
+.global-search {
+  padding: 8px 12px;
+  width: 100%;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+.rows-per-page {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rows-per-page select {
+  padding: 7px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+/* Split-View Layout - Table on left, Details on right */
+.app-container {
+  display: flex;
+  width: 100%;
+  min-height: calc(100vh - 180px);
+}
+
+/* Main content with table (left side) */
+.main-content {
+  width: 70%;
+  padding-left: 15px; /* changed from padding-right */
+  height: 90%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  order: 1; /* Add this to change the order */
+}
+/* Table styling */
+.table-container {
+  flex: 1;
+  height: 90%;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  margin-bottom: 10px;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+/* Task details panel styling (right side) */
+.task-details-panel {
+  flex: 1;
+  width: 30%;
+  height: calc(100vh - 180px);
+  background-color: #b8d1e5;
+  border-left: 1px solid #dee2e6; /* changed from border-right */
+  border-radius: 6px;
+  padding: 10px;
+  overflow-y: auto;
+  box-shadow: -2px 0 8px rgba(0,0,0,0.05); /* changed shadow direction */
+  order: 2; /* Add this to change the order */
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+  font-size: 14px;
+}
+
+th, td {
+  border: 1px solid #dee2e6;
+  padding: 12px;
+  text-align: left;
+  vertical-align: middle;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+th {
+  background-color: #8fa9dd;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Sortable headers */
+.sortable-header {
+  cursor: pointer;
+  position: relative;
+  padding-right: 25px;
+}
+
+.sort-icon {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* Alternating row colors */
+tr:nth-child(even) {
+  background-color: #d9e8f5;
+}
+
+tr:nth-child(odd) {
+  background-color: #b8d1e5;
+}
+
+tr:hover {
+  background-color: #e6f4ff;
+}
+
+.selected-row {
+  background-color: #fff3cd !important;
+}
+
+/* Cell content */
+.cell-content {
+  min-height: 20px;
+  width: 100%;
+  overflow-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Action column */
+.action-cell {
+  white-space: nowrap;
+  width: 1%;
+  text-align: center;
+}
+
+.action-cell button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  margin: 0 2px;
+  color: #071D49;
+  transition: color 0.2s;
+}
+
+.action-cell button:hover {
+  color: #0d6efd;
+}
+
+
+.edit-cell input {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.page-btn {
+  padding: 8px 15px;
+  background-color: #071D49;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.page-btn:disabled {
+  background-color: #b8b8b8;
+  cursor: not-allowed;
+}
+
+.page-info {
+  padding: 0 15px;
+}
+
+/* Selection container */
+.selection-container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.selection-title {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #071D49;
+  font-weight: 500;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.big-button {
+  background-color: #071D49;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  min-width: 150px;
+  transition: background-color 0.2s;
+}
+
+.big-button:hover {
+  background-color: #0a2966;
+}
+
+/* Details panel styling */
+.details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.details-header h3 {
+  color: #071D49;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #071D49;
+}
+
+/* Task details content */
+.details-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.detail-item {
+  padding: 8px 10px;
+  margin-bottom: 8px;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.detail-item strong {
+  color: #071D49;
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .options, .table-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .big-button {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .search-container {
+    max-width: none;
+  }
+  
+  .pagination {
+    flex-direction: column;
+  }
+  
+  .cell-content {
+    max-height: 80px;
+    overflow-y: auto;
+  }
+  
+  .app-container {
+    flex-direction: column;
+  }
+  
+  .main-content, .task-details-panel {
+    width: 100%;
+  }
+  
+  .task-details-panel {
+    margin-top: 20px;
+    height: auto;
+    max-height: 500px;
+  }
+  
+}

@@ -1,0 +1,72 @@
+.app-container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Main content with table (left side) */
+.main-content {
+  flex: 7;
+  padding: 0 2%;
+  display: flex;
+  flex-direction: column;
+  order: 1;
+}
+
+/* Table styling */
+.table-container {
+  flex: 1;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  margin-bottom: 10px;
+  overflow-y: auto;
+  overflow-x: auto;
+  min-height: 100px; /* Minimum height to ensure visibility */
+}
+
+/* Task details panel styling (right side) */
+.task-details-panel {
+  flex: 3;
+  background-color: #b8d1e5;
+  border-left: 1px solid #dee2e6;
+  border-radius: 6px;
+  padding: 10px;
+  overflow-y: auto;
+  box-shadow: -2px 0 8px rgba(0,0,0,0.05);
+  order: 2;
+  min-height: 200px; /* Ensure minimum height */
+  display: block !important; /* Force display */
+}
+
+/* Responsive adjustments - keep panel visible */
+@media (min-width: 768px) and (max-width: 1200px) {
+  .app-container {
+    flex-wrap: nowrap;
+  }
+  
+  .main-content {
+    flex: 3;
+  }
+  
+  .task-details-panel {
+    flex: 1;
+    height: auto; /* Use auto instead of fixed height */
+    margin-top: 0; /* Remove margin that pushes it down */
+  }
+}
+
+@media (max-width: 767px) {
+  .app-container {
+    flex-direction: column;
+  }
+  
+  .main-content, .task-details-panel {
+    width: 100%;
+  }
+  
+  .task-details-panel {
+    height: 300px;
+    margin-top: 15px;
+  }
+}

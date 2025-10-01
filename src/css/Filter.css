@@ -1,0 +1,171 @@
+/* Main container */
+.filter-container {
+  background-color: #d7e3fc;
+  padding: 2rem;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.ok-button,.btn-cancel,.button-icon {
+  background: #0b2244;
+  color: #fff;
+  border: 1px solid #00040a;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 6px 30px;
+  cursor: pointer;
+}
+.btn-cancel {
+ background: #dacfcf;
+  border: 1px solid #214b93;
+  color: #214b93;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.button-icon {
+  height: 1rem;
+  width: 1rem;
+  color: #4b5563;
+}
+
+.button-text {
+  font: size 2px;;
+}
+
+/* Filter toggles */
+.filter-toggles {
+  background-color: white;
+  border-radius: 9999px;
+  padding: 0.75rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.filter-toggle {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.toggle-radio {
+  height: 1.25rem;
+  width: 1.25rem;
+  color: #6f80a6;
+  cursor: pointer;
+}
+
+.toggle-label {
+  margin-left: 0.5rem;
+  font-size: 0.875rem;
+}
+
+/* Filter row container */
+.filter-row-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.filter-row-container.three-column {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Filter dropdown component */
+.filter-dropdown {
+  background-color: white;
+  padding: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-radius: 0.5rem;
+}
+
+.filter-title {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.filter-title::after {
+  content: "";
+  display: block;
+  width: 30%;
+  height: 0.5px;
+  background-color: #1855d9;
+  top: 50%;
+  left: 0;
+}
+
+.filter-title span {
+  background-color: white;
+  position: relative;
+  z-index: 2;
+  padding-right: 8px;
+}
+
+.filter-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.filter-column {
+  width: 48%;
+}
+
+.filter-label {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Select dropdown */
+.select-wrapper {
+  position: relative;
+}
+
+/* Make dropdown arrows smaller */
+ .select-arrow svg,
+.arrow-icon {
+  height: 0.75rem;
+  width: 0.75rem;
+}
+
+/* For the large arrow at the bottom of the second image */
+.filter-container .large-dropdown-arrow {
+  height: 1.5rem;
+  width: 1.5rem;
+  opacity: 0.7;
+}
+.select-input-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.filter-select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px 4px 0 0;
+  margin-bottom: -1px;
+}
+
+.dialog-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 0 0 4px 4px;
+}

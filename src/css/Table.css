@@ -1,0 +1,105 @@
+/* Table.css */
+
+/* Table container */
+.table-container {
+  --primary-color: #3498db;
+  --primary-dark: #2980b9;
+  --primary-light: #a9cce3;
+  --accent-color: #e74c3c;
+  --accent-dark: #c0392b;
+  --text-primary: #333;
+  --text-secondary: #666;
+  --text-light: #999;
+  --background-primary: #fff;
+  --background-secondary: #f7f9fa;
+  --background-tertiary: #edf2f7;
+  --border-color: #e2e8f0;
+  --border-radius: 6px;
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 24px;
+  --font-size-sm: 12px;
+  --font-size-md: 14px;
+  --font-size-lg: 16px;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --transition-speed: 0.2s;
+
+  /* Status colors */
+  --status-active: #2ecc71;
+  --status-inactive: #95a5a6;
+  --status-pending: #f39c12;
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  color: var(--text-primary);
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+  box-sizing: border-box;
+}
+
+/* Table controls */
+.table-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.table-search input {
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  font-size: var(--font-size-md);
+  min-width: 250px;
+  transition: border-color var(--transition-speed) ease;
+}
+
+.table-search input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+box-shadow: 0 0 0 2px var(--primary-light);
+}
+/* Add this to your Table.css */
+
+.resizable-column {
+  position: relative;
+  overflow: visible;
+}
+
+.resize-handle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 6px;
+  height: 100%;
+  cursor: col-resize;
+  background: transparent;
+  z-index: 10;
+}
+
+.resize-handle:hover {
+  background: var(--primary-light);
+}
+
+.resize-handle:active {
+  background: var(--primary-color);
+}
+
+/* Additional style for when resizing is active */
+.react-table.resizing {
+  cursor: col-resize;
+  user-select: none;
+}
+
+/* Ensure the table doesn't expand beyond container */
+.table-wrapper {
+  overflow-x: auto;
+}
